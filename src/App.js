@@ -22,6 +22,7 @@ import AccountPage from './pages/Setting/Account';
 import AddStore from './pages/storeandproduct/AddStore';
 import AddItem from './pages/storeandproduct/AddItem';
 import RiderComplaints from './pages/Comlaints/rider_Comalaints';
+import Chat from './pages/Setting/Chat';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
             <Route path="/customer/user-manage" element={<User_manage />} />
             {/* Setting */}
             <Route path="/settings/help_and_Support" element={<HelpAndSupport />} />
+            <Route path="/settings/Chat" element={<Chat />} />
             <Route path="/settings/AccountPage" element={<AccountPage />} />
 
 

@@ -103,7 +103,7 @@ const Sidebar = () => {
       icon: <SettingsIcon />,
       subItems: [
         { text: "Help and Support", path: "/settings/help_and_Support" },
-        { text: "Chat", path: "/settings/chat" },
+        { text: "Chat", path: "/settings/Chat" },
         { text: "Account", path: "/settings/AccountPage" },
       ],
     },

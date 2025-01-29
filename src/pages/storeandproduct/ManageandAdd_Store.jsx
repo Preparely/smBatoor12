@@ -56,11 +56,11 @@ const ManageandAdd_Store = () => {
   const handleRowClick = (index) => {
     setOpenRow(openRow === index ? null : index); // Toggle open/close for the row
   };
-        const [menuRowIndex, setMenuRowIndex] = useState(null);
-  
+  const [menuRowIndex, setMenuRowIndex] = useState(null);
+
   const handleMenuToggle = (index) => {
     setMenuRowIndex(menuRowIndex === index ? null : index);
-};
+  };
 
   const TableContent = () => (
     <TableContainer component={Paper}>
@@ -112,27 +112,27 @@ const ManageandAdd_Store = () => {
                     {row.status}
                   </Typography>
                 </TableCell>
-                     <Select
-                                                            value=""
-                                                            displayEmpty
-                                                            size="small"
-                                                            renderValue={() => (
-                                                                <IconButton size="small" onClick={() => handleMenuToggle(index)}>
-                                                                    Duplicate
-                                                                    {menuRowIndex === index ? <ExpandLess /> : <ExpandMore />}
-                                                                </IconButton>
-                                                            )}
-                                                            sx={{
-                                                                background: "transparent",
-                                                                border: "none",
-                                                                outline: "none",
-                                                            }}
-                                                        >
-                                                            <MenuItem  onClick={() => handleMenuToggle(null)}>Edit</MenuItem>
-                                                            <MenuItem onClick={() => handleMenuToggle(null)}>Delete</MenuItem>
-                                                            <MenuItem onClick={() => handleMenuToggle(null)}>Deactivate</MenuItem>
-                                                            <MenuItem onClick={() => handleMenuToggle(null)}>Activate</MenuItem>
-                                                        </Select>
+                <Select
+                  value=""
+                  displayEmpty
+                  size="small"
+                  renderValue={() => (
+                    <IconButton size="small" onClick={() => handleMenuToggle(index)}>
+                      Duplicate
+                      {menuRowIndex === index ? <ExpandLess /> : <ExpandMore />}
+                    </IconButton>
+                  )}
+                  sx={{
+                    background: "transparent",
+                    border: "none",
+                    outline: "none",
+                  }}
+                >
+                  <MenuItem onClick={() => handleMenuToggle(null)}>Edit</MenuItem>
+                  <MenuItem onClick={() => handleMenuToggle(null)}>Delete</MenuItem>
+                  <MenuItem onClick={() => handleMenuToggle(null)}>Deactivate</MenuItem>
+                  <MenuItem onClick={() => handleMenuToggle(null)}>Activate</MenuItem>
+                </Select>
                 {/* <TableCell>
                   <Box display="flex" flexDirection={'column'} alignItems="center" gap={1}>
                     <Button
@@ -200,7 +200,7 @@ const ManageandAdd_Store = () => {
           <Button
             variant="contained"
             startIcon={<AddIcon />}
-              component={Link}
+            component={Link}
             to="/stores/Add-Store"
             sx={{
               backgroundColor: "#ff6600",
@@ -386,7 +386,7 @@ const ManageandAdd_Store = () => {
               Reset
             </Button>
           </Grid>
-        </Grid> 
+        </Grid>
         {/* Conditional Table Content */}
         <TableContent />
         {/* {tabValue === 0 && <TableContent />}
