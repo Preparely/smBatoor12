@@ -8,6 +8,14 @@ export default function Chat() {
   ]);
   const [input, setInput] = useState("");
 
+  const predefinedResponses = {
+    "hi": "Hi!",
+    "hello": "Hello!",
+    "how are you": "I am good, but I don't have feelings because I am a bot.",
+    "who are you": "I am Batoor, your chatbot assistant.",
+    "help": "How can I assist you today?"
+  };
+
   const sendMessage = () => {
     if (!input.trim()) return;
 
@@ -16,12 +24,13 @@ export default function Chat() {
     setInput("");
 
     setTimeout(() => {
-      setMessages([...newMessages, { sender: "bot", text: "How to start your own country: 15 steps" }]);
+      const botResponse = predefinedResponses[input.toLowerCase()] || "Sorry, I don't understand that.";
+      setMessages(prevMessages => [...prevMessages, { sender: "bot", text: botResponse }]);
     }, 1000);
   };
 
   return (
-    <Box sx={{ display: "flex", height: "87vh", bgcolor: "#FAF5EF" }}>
+    <Box sx={{ display: "flex", height: "100vh", bgcolor: "#FAF5EF" }}>
       {/* Sidebar */}
       <Paper sx={{ width: 280, p: 2, borderRight: "1px solid #ddd" }}>
         <Typography variant="h6" sx={{ mb: 2 }}>Chat</Typography>
