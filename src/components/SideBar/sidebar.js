@@ -69,12 +69,12 @@ const Sidebar = () => {
       ],
     },
     {
-      text: "Customer",
+      text: "User Management",
       icon: <PeopleIcon />,
       subItems: [
         { text: "Rider Manage", path: "/customer/rider-manage" },
-        { text: "User Manage", path: "/customer/user-manage" },
-        { text: "Rider Performance", path: "/customer/rider-performance" },
+        { text: "Customer Manage", path: "/customer/customer-manage" },
+        // { text: "Rider Performance", path: "/customer/rider-performance" },
       ],
     },
     {

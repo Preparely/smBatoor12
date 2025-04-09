@@ -101,7 +101,7 @@ const OnlineOrder = () => {
                                     textTransform: "none",
                                 }}
                             >
-                                Prepared
+                                Pannding
                             </Button>
                             <Button
                                 onClick={() => handleClick("Delivered")}
