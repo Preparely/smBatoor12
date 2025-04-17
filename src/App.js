@@ -12,7 +12,6 @@ import AllItems from "./pages/storeandproduct/AllItems";
 import ManageandAdd_Store from "./pages/storeandproduct/ManageandAdd_Store";
 import Manage_Product from "./pages/storeandproduct/Manage_Products";
 import Payment from "./pages/Payment/payment";
-import UserComplaints from "./pages/Comlaints/user_Complaints";
 import MenuCard from "./pages/Menu/Menu_card";
 import HelpAndSupport from "./pages/Setting/helpAndSupport";
 import User_manage from "./pages/Customer/User-manage";
@@ -23,10 +22,11 @@ import PerformanceChart from "./pages/Riders/Chart";
 import AccountPage from "./pages/Setting/Account";
 import AddStore from "./pages/storeandproduct/AddStore";
 import AddItem from "./pages/storeandproduct/AddItem";
-import RiderComplaints from "./pages/Comlaints/rider_Comalaints";
 import Chat from "./pages/Setting/Chat";
 import Login from "./pages/Login/login";
 import CustomerTable from "./pages/Customer/User-manage";
+import UserComplaints from "./pages/Complaints/user_Complaints";
+import RiderComplaints from "./pages/Complaints/rider_Comalaints";
 
 // PrivateRoute Component: Only renders children if user is authenticated.
 const PrivateRoute = () => {
@@ -76,8 +76,8 @@ function App() {
           <Route path="/stores/PerformanceChart" element={<PerformanceChart />} />
           <Route path="/stores/Payment" element={<Payment />} />
           <Route path="/online-order" element={<OnlineOrder />} />
-          <Route path="/stores/user_Complaints" element={<UserComplaints />} />
-          <Route path="/stores/rider_Complaints" element={<RiderComplaints />} />
+          <Route path="/stores/UserComplaints" element={<UserComplaints />} />
+          <Route path="/stores/riderComplaints" element={<RiderComplaints />} />
           <Route path="/stores/Menu_Card" element={<MenuCard />} />
           <Route path="/customer" element={<h1>Customer</h1>} />
           <Route path="/customer/rider-manage" element={<RiderManage />} />

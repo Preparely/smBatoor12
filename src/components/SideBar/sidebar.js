@@ -81,8 +81,8 @@ const Sidebar = () => {
       text: "Complaints",
       icon: <ReportProblemIcon />,
       subItems: [
-        { text: "User Complaints", path: "/stores/user_Complaints" },
-        { text: "Rider Complains", path: "/stores/rider_Complaints" },
+        { text: "User Complaints", path: "/stores/UserComplaints" },
+        { text: "Rider Complains", path: "/stores/riderComplaints" },
       ],
     },
     {
